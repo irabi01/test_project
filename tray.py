@@ -53,9 +53,12 @@ class Tray(object):
     def get_total_price(self):
         return sum(Decimal(item['price'])*Decimal(item['quantity']) for item in self.tray.values())
 
+    #this function is for cleanin the shopping cart
     def clear(self):
         del self.session
         self.save()
+        
+        
 
     
     
